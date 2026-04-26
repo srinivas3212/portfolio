@@ -23,26 +23,24 @@ body {
   top: 0;
   left: 0;
   background-color: #020c1b;
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* padding: 15px 50px; */
   z-index: 1000;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
-  margin-left: 0;
   align-items: center;
   padding: 10px 40px;
   background: #020617;
 }
+
 nav ul {
   display: flex;
   list-style: none;
   gap: 25px;
   font-size: 20px;
 }
+
 nav a {
   color: white;
   text-decoration: none;
@@ -62,17 +60,6 @@ nav a:hover {
   background: linear-gradient(to right, #0f172a 40%, transparent);
 }
 
-/* Glow */
-.hero::before {
-  /* content: ""; */
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.3), transparent);
-  top: -100px;
-  right: -100px;
-}
-
 /* Content */
 .content {
   position: relative;
@@ -80,21 +67,22 @@ nav a:hover {
   max-width: 600px;
   font-size: 20px;
 }
+
 .content h1 {
   display: flex;
   justify-content: center;
 }
+
 #typing {
   color: #0ef;
 }
+
 /* Buttons */
 .buttons {
   display: flex;
   gap: 20px;
   justify-content: center;
   width: 550px;
-
-  /* margin-top: 20px; */
 }
 
 button {
@@ -104,29 +92,27 @@ button {
   color: #000;
   border-radius: 40px;
   font-size: 16px;
-  font-weight: 400;
   cursor: pointer;
   transition: 0.3s;
 }
 
 button:hover {
   transform: scale(1.1);
-  color: #000;
   box-shadow: 0 0 20px #0ef;
 }
-/* Modal Background */
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
   left: 0;
   top: 0;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* Modal Box */
 .modal-content {
   background: #0b1c2c;
   margin: 10% auto;
@@ -135,15 +121,6 @@ button:hover {
   border-radius: 10px;
   text-align: center;
 }
-
-/* Close Button */
-.close {
-  float: right;
-  font-size: 25px;
-  cursor: pointer;
-  color: white;
-}
-
 /* Inputs */
 .modal-content input,
 .modal-content textarea {
@@ -162,54 +139,61 @@ button:hover {
   border-radius: 20px;
   cursor: pointer;
 }
+
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Icons */
 .icons {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   width: 550px;
 }
+
 .icons a {
   display: inline-flex;
-  /* color: rgb(196, 15, 15); */
   font-size: 20px;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
-  background: transparent;
   border: 2px solid #0ef;
   border-radius: 50%;
   color: #0ef;
-  text-decoration: none;
   margin: 30px 15px 30px 0px;
 }
+
 .icons a:hover {
   background: #0ef;
   color: #000;
-  box-shadow: 0 0 20px #0ef;
 }
+
+/* More button */
 .btxn {
   display: flex;
   justify-content: center;
   width: 550px;
 }
+
 .btn {
-  display: inline;
   padding: 6px 15px;
-  margin-right: 20px;
   background: #0ef;
   border-radius: 40px;
-  font-size: 16px;
+  margin-right: 20px;
   color: #000;
-  letter-spacing: 1px;
   text-decoration: none;
+  font-size: 16px;
   font-weight: 600;
 }
+
 /* Image */
 .image {
   position: absolute;
-  right: 0px;
-  bottom: 0;
+  right: 0;
   top: 90px;
 }
 
@@ -258,11 +242,6 @@ button:hover {
   border-radius: 10px;
   flex: 1;
   min-width: 250px;
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
 }
 
 /* Animation */
@@ -281,7 +260,6 @@ button:hover {
 #typing::after {
   content: "|";
   animation: blink 1s infinite;
-  /* color: #0ef; */
 }
 
 @keyframes blink {
@@ -290,72 +268,30 @@ button:hover {
   }
 }
 
-/* Mobile Responsive */
+/* ✅ MOBILE FIX ONLY (NO DESIGN CHANGE) */
 @media (max-width: 768px) {
-  /* Fix hero layout */
   .hero {
-    flex-direction: column;
-    padding: 120px 20px 40px;
-    text-align: center;
+    padding: 120px 20px;
   }
 
-  /* Fix text */
-  .content {
-    max-width: 100%;
-    font-size: 16px;
-  }
-
-  .content h1 {
-    font-size: 26px;
-    justify-content: center;
-  }
-
-  .content p {
-    width: 100%;
-    line-height: 1.6;
-  }
-
-  /* Fix buttons */
-  .buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .buttons button {
-    width: 100%;
-  }
-
-  /* Fix icons */
-  .icons {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Fix "More About Me" button */
+  .buttons,
+  .icons,
   .btxn {
     width: 100%;
   }
 
-  /* FIX IMAGE (VERY IMPORTANT) */
-  .image {
-    position: static;
-    margin-top: 30px;
-  }
-
   .image img {
-    width: 90%;
+    width: 100%;
+    max-width: 350px;
     height: auto;
-    mask-image: none;
   }
 
-  /* Navbar fix */
-  nav {
-    padding: 10px 20px;
+  .content {
+    max-width: 100%;
+    padding: 0 10px;
   }
 
-  nav ul {
-    gap: 15px;
-    font-size: 16px;
+  .content p {
+    width: 100%;
   }
 }
