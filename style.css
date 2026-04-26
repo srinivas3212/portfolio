@@ -270,28 +270,70 @@ button:hover {
 
 /* ✅ MOBILE FIX ONLY (NO DESIGN CHANGE) */
 @media (max-width: 768px) {
+  /* Fix hero layout */
   .hero {
-    padding: 120px 20px;
+    flex-direction: column;
+    padding: 120px 20px 40px;
+    text-align: center;
   }
 
-  .buttons,
-  .icons,
-  .btxn {
-    width: 100%;
-  }
-
-  .image img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-  }
-
+  /* Fix text */
   .content {
     max-width: 100%;
-    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  .content h1 {
+    font-size: 26px;
+    justify-content: center;
   }
 
   .content p {
     width: 100%;
+    line-height: 1.6;
+  }
+
+  /* Fix buttons */
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  /* Fix icons */
+  .icons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Fix "More About Me" button */
+  .btxn {
+    width: 100%;
+  }
+
+  /* FIX IMAGE (VERY IMPORTANT) */
+  .image {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .image img {
+    width: 90%;
+    height: auto;
+    mask-image: none;
+  }
+
+  /* Navbar fix */
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+    font-size: 16px;
   }
 }
