@@ -78,7 +78,7 @@ nav a:hover {
   position: relative;
   z-index: 2;
   max-width: 600px;
-    font-size: 20px;
+  font-size: 20px;
 }
 .content h1 {
   display: flex;
@@ -94,15 +94,14 @@ nav a:hover {
   justify-content: center;
   width: 550px;
 
-
   /* margin-top: 20px; */
 }
 
 button {
   padding: 10px 20px;
   border: none;
-  background:#0ef;
-  color:#000;
+  background: #0ef;
+  color: #000;
   border-radius: 40px;
   font-size: 16px;
   font-weight: 400;
@@ -189,7 +188,7 @@ button:hover {
   color: #000;
   box-shadow: 0 0 20px #0ef;
 }
-.btxn{
+.btxn {
   display: flex;
   justify-content: center;
   width: 550px;
@@ -291,18 +290,72 @@ button:hover {
   }
 }
 
-/* Responsive */
+/* Mobile Responsive */
 @media (max-width: 768px) {
+  /* Fix hero layout */
   .hero {
     flex-direction: column;
+    padding: 120px 20px 40px;
     text-align: center;
   }
 
-  .image {
-    position: static;
-  }
-
+  /* Fix text */
   .content {
     max-width: 100%;
+    font-size: 16px;
+  }
+
+  .content h1 {
+    font-size: 26px;
+    justify-content: center;
+  }
+
+  .content p {
+    width: 100%;
+    line-height: 1.6;
+  }
+
+  /* Fix buttons */
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  /* Fix icons */
+  .icons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Fix "More About Me" button */
+  .btxn {
+    width: 100%;
+  }
+
+  /* FIX IMAGE (VERY IMPORTANT) */
+  .image {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .image img {
+    width: 90%;
+    height: auto;
+    mask-image: none;
+  }
+
+  /* Navbar fix */
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+    font-size: 16px;
   }
 }
