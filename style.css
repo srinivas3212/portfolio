@@ -341,24 +341,11 @@ button:hover {
   nav ul li {
     white-space: nowrap; /* keep words in one line */
   }
-  .modal {
-    align-items: flex-start; /* move modal slightly down */
-    padding-top: 60px; /* space from top (IMPORTANT) */
-  }
-
   .modal-content {
-    position: relative;
     width: 90%;
-    max-width: 320px;
-    margin: 0 auto;
+    max-width: 300px;
   }
-
-  /* FIX CLOSE BUTTON POSITION */
   .close {
-    position: absolute;
-    top: 10px; /* inside box */
-    right: 12px;
-    font-size: 20px;
-    z-index: 10;
+    padding-top: 50px;
   }
 }
