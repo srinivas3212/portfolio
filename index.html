@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srinivas Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <!-- 🔥 Scroll Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <h2>PORTIFOLIO</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+
+    <div class="content">
+      <h1>Hello, I'm&nbsp;<span id="typing"></span></h1>
+      <p>Python Full Stack Developer with a strong foundation in front-end and back-end technologies.
+        I love building scalable applications, solving real-world problems, and delivering smooth user experiences.</p>
+
+      <div class="buttons">
+        <button onclick="openModal()">Hire Me</button>
+        <a href="srinivas_resume.pdf" download>
+          <button>Download Resume</button>
+        </a>
+      </div>
+      <!-- CONTACT MODAL -->
+      <div id="contactModal" class="modal">
+        <div class="modal-content">
+
+          <span class="close" onclick="closeModal()">&times;</span>
+
+          <h2>Contact Me</h2>
+
+          <form action="https://formspree.io/f/myklbajq" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+          </form>
+
+        </div>
+      </div>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/bonthu-srinivas-a6b68b30a" target="_blank" rel="noopener noreferrer"><i
+            class='bx bxl-linkedin'></i></a>
+        <a href="https://www.instagram.com/srinivas3212/" target="_blank" rel="noopener noreferrer"><i
+            class='bx bxl-instagram'></i></a>
+        <a href="https://www.facebook.com/share/1DoYR32fwM/" target="_blank" rel="noopener noreferrer"><i
+            class='bx bxl-facebook'></i></a>
+        <a href="https://wa.me/919550072677?text=Hello%20Srinivas%2C%20I%20saw%20your%20portfolio" target="_blank"><i
+            class='bx bxl-whatsapp'></i></a>
+      </div>
+      <div class="btxn">
+        <a href="" class="btn">More About Me</a>
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="image.png" alt="profile">
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" class="card fade">
+    <h2>About Me</h2>
+    <p>Motivated graduate skilled in Python, SQL & frontend technologies.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="card fade">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="card fade">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal portfolio using HTML, CSS, JS.</p>
+        <button>View Project</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Leukemia Detection</h3>
+        <p>Image processing based disease detection project.</p>
+        <button>View Project</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="card fade">
+    <h2>Contact</h2>
+    <p>Email: bonthusrinivas70@gmail.com</p>
+    <p>Mobile number: 9550072677</p>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
