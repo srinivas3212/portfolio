@@ -345,12 +345,4 @@ button:hover {
     width: 90%;
     max-width: 300px;
   }
-  .close {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    font-size: 20px;
-    color: #fff;
-    z-index: 1000;
-  }
 }
