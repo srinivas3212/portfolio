@@ -341,4 +341,8 @@ button:hover {
   nav ul li {
     white-space: nowrap; /* keep words in one line */
   }
+  .modal-content {
+    width: 90%;
+    max-width: 300px;
+  }
 }
